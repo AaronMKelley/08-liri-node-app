@@ -3,10 +3,9 @@
 
 ## Spotify This Song
   The first function of the liri bot is the ability to take the title of a song and be  provided with: 
-      1. Artist(s)
-      2. The songs name 
-      3. A preview link of the song from Spotify
-      4. The album that the song is from
+       1. Name of venue(s)
+       2. Venue location(s)
+       3. Date of the Event (in MM/DD/YYYY form)
   To access this search, in the terminal one will input "node liri.js spotify-this-song <<insert song title here>>". If no song title is inputed then the search will default to "The Sign" by Ace the Base. 
   
   ## Concert This 
