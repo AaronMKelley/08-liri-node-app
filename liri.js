@@ -37,58 +37,55 @@ function spotifyThis(q){
 
 
 // Search for bands in town 
-// function bandsInTown(n){
-//   n=search;
-//  axios({
-//   method:'get',
-//   url:"https://rest.bandsintown.com/artists/" + search + "/events?app_id=codingbootcamp",
-//   responseType:'JSON'
-//  })
-// .then(function(response) {
+function bandsInTown(){
+ axios({
+  method:'get',
+  url:"https://rest.bandsintown.com/artists/" + search + "/events?app_id=codingbootcamp",
+  responseType:'JSON'
+ })
+.then(function(response) {
   
-//   for (var i=0;i<response.data.length;i++){
-//   console.log(response.data[i].venue.name)
-//   console.log(response.data[i].venue.city)
-//   console.log(response.data[i].venue.region)
-//   console.log(moment(response.data[i].datetime).format('L'))
-//   }
+  for (var i=0;i<response.data.length;i++){
+  console.log(response.data[i].venue.name)
+  console.log(response.data[i].venue.city)
+  console.log(response.data[i].venue.region)
+  console.log(moment(response.data[i].datetime).format('L'))
+  }
   
-// })
-// .catch(function (error) {
-//   console.log(error);
-// })};
-// }
-// //bandsInTown();
+})
+.catch(function (error) {
+  console.log(error);
+})};
 
 // // movie OMDB
-// function movieTime(n){
-// if (keyWord=="movie-this"){
-//   var url;
-//   n=search;
-//   if (search){
-//   url= "https://www.omdbapi.com/?t="+ search + "&y=&plot=short&apikey=trilogy"
-//   }else{
-//     url="https://www.omdbapi.com/?t=mr+nobody&y=&plot=short&apikey=trilogy"
-//   }
-// axios({
-//   method:'get',
-//   responseType:'JSON',
-//   url:url,
-//   limit:1})
-//   .then(function(response) {
-//   console.log(response.data.Title)
-//   console.log(response.data.Year)
-//   console.log(response.data.imdbRating)
-//   console.log(response.data.Metascore)
-//   console.log(response.data.Country)
-//   console.log(response.data.Language)
-//   console.log(response.data.Plot)
-//   console.log(response.data.Actors)
-// })
-// };
-// }
+function movieTime(n){
+if (keyword=="movie-this"){
+  var url;
+  n=search;
+  if (search){
+  url= "https://www.omdbapi.com/?t="+ search + "&y=&plot=short&apikey=trilogy"
+  }else{
+    url="https://www.omdbapi.com/?t=mr+nobody&y=&plot=short&apikey=trilogy"
+  }
+axios({
+  method:'get',
+  responseType:'JSON',
+  url:url,
+  limit:1})
+  .then(function(response) {
+  console.log(response.data.Title)
+  console.log(response.data.Year)
+  console.log(response.data.imdbRating)
+  console.log(response.data.Metascore)
+  console.log(response.data.Country)
+  console.log(response.data.Language)
+  console.log(response.data.Plot)
+  console.log(response.data.Actors)
+})
+};
+}
 
-// //movieTime();
+
 
 // read from random.text file 
 function pullFromTextFile(){
@@ -101,32 +98,20 @@ function pullFromTextFile(){
    keyword = dataArr[0]
    search = dataArr[1]
 
-  //  switch (keyword) {
-  //   case 'spotify-this-song':
-  //     keyword = "spotify-this-song"
-  //     spotifyThis(search)
-  //     break;
-  //   case 'concert-this':
-  //     break;
-  //   default:
-  //     console.log("I don't understand your command")
-  // }
-  
    if (keyword==="spotify-this-song"){
     spotifyThis(search)
    }
-  // else if(dataArr[0]==="concert-this"){
-  //    var artist=dataArr[1].slice(1,-1);
-  //    bandsInTown(artist)
-  //  }
-  //  else if(dataArr[0]==="movie-this")
-  //    var movie=dataArr[1].slcie(1,-1);
-  //    movieTime(movie);
-  // })
-
+  else if(keyword==="concert-this"){
+     bandsInTown(search)
+   }
+   else if(keyword==="movie-this")
+     movieTime(search);
   })
-}
 
+};
+
+
+// based on keywords we determine what function to run. 
 if (keyword=='spotify-this-song') {
     spotifyThis( search )
 } else if (keyword=="concert-this") {
