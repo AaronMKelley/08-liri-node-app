@@ -13,7 +13,7 @@
        1. Name of venue(s)
        2. Venue location(s)
        3. Date of the Event (in MM/DD/YYYY form)
-  To access this search, in the terminal one will input "node liri.js concert-this <<insert name of artist here>>".
+    To access this search, in the terminal one will input "node liri.js concert-this <<insert name of artist here>>".
   
   ## Movie This 
     Third function that the liri bot can conduct is the ability to input the title of a movie and provide the user with:
