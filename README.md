@@ -1,5 +1,6 @@
 # 08-liri-node-app
   The liri bot has the ability to conduct searches of Spotify Songs, Concerts and Movies and provide accuartate specific pieces of information about each. 
+  
 
 ## Spotify This Song
     The first function of the liri bot is the ability to take the title of a song and be  provided with: 
