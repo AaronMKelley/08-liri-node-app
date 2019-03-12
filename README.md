@@ -3,7 +3,7 @@
   
 ## Accessing Node
     Before you can run any commands or install any JSON packages, you need to intialize Node and make sure that it is running in your terminal in the right local folder. 
-    ![Alt text](https://github.com/AaronMKelley/08-liri-node-app/blob/master/Accessing%20Node.png)
+    ![Alt text](08-liri-node-app/Accessing Node.png)
 ## Spotify This Song
     The first function of the liri bot is the ability to take the title of a song and be  provided with: 
        1. The song's name
