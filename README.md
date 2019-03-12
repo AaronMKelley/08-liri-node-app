@@ -10,8 +10,9 @@
        1. The song's name
        2. A preview link of the song from Spotify
        3. The album that the song is from
-        To access this search, in the terminal one will input "node liri.js spotify-this-song <<insert song title here>>". If no song title is inputed then the search will default to "The Sign" by Ace the Base. 
-  
+        To access this search, in the terminal one will input "node liri.js spotify-this-song <<insert song title here>>". If no song title is inputed then the search will default to "The Sign" by Ace the Base (results actually show "sign of the times" by Harry Styles. 
+  ![node](https://raw.githubusercontent.com/AaronMKelley/08-liri-node-app/master/Spotify-This_song.png)
+  ![node](https://raw.githubusercontent.com/AaronMKelley/08-liri-node-app/master/Spotify-This-No-Song.png)
   ## Concert This 
     This second function of the liri bot is the ability to input thr name of a music artist and be provided with: 
        1. Name of venue(s)
