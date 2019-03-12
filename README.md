@@ -19,7 +19,7 @@
        2. Venue location(s)
        3. Date of the Event (in MM/DD/YYYY form)
     To access this search, in the terminal one will input "node liri.js concert-this <<insert name of artist here>>".
-  
+  ![node] (https://raw.githubusercontent.com/AaronMKelley/08-liri-node-app/master/Concert-This.png)
   ## Movie This 
     Third function that the liri bot can conduct is the ability to input the title of a movie and provide the user with:
         1. Title of the movie.
@@ -31,4 +31,6 @@
         7. Plot of the movie.
         8. Actors in the movie.
     To access this search, in the terminal one will input "node liri.js moive-this <<insert title of moive here>>". If not title is inputed then the search will default to the movie "Mr Nobody"  
+   ![node] (https://raw.githubusercontent.com/AaronMKelley/08-liri-node-app/master/Movie-This.png)
+   ![node] (https://github.com/AaronMKelley/08-liri-node-app/blob/master/Movie-This-No-Title.png)
         
